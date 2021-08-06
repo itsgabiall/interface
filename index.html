@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagens/icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portal Assistencial</title>
+</head>
+
+<body>
+    <nav>
+        <a><img id="imagem-menu" src="Imagens/iconmenu.png"></a>
+        <ul>
+            <a class="itens-navegacao" href="#">
+                <li>Gestão Setores</li>
+            </a>
+            <a class="itens-navegacao" href="#">
+                <li>Painel RPA</li>
+            </a>
+            <a class="itens-navegacao" href="#">
+                <li>Painel CIGI</li>
+            </a>
+            <a class="itens-navegacao" href="#">
+                <li>Gestão de Médicos</li>
+            </a>
+            <a class="itens-navegacao" href="#">
+                <li>Pesquisa Clínica</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <fieldset>
+            <ul>
+                <li>
+                    <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+                    <label for="tab1">Gestão de Parâmetros</label>
+                    <div class="conteudo">
+                        <article>
+                            <div class="inputs">
+                                <div>
+                                    <h4>Estabelecimento</h4>
+                                    <div class="itens-titulos">
+                                        <input type="checkbox" name="Estabelecimento" value="Bela Vista"> 1 - Bela Vista
+                                        &nbsp;
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> 321 -
+                                        Brasília &nbsp;
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> Outro <input
+                                            type="text" name="Estabelecimento" size="5">
+                                    </div>
+
+                                    <br /><br />
+
+                                    <h4>Configuração ambiente</h4>
+                                    <div class="itens-titulos">
+                                        <input type="checkbox" name="Estabelecimento"> Homologação
+                                        <input type="checkbox" name="Estabelecimento"> Simulação
+                                        <input type="checkbox" name="Estabelecimento"> Qualidade
+                                    </div>
+
+                                    <br />
+
+                                    <h4>Código Setor</h4>
+                                    <div class="itens-titulos">
+                                        <input type="number" size="5" placeholder="Número"> <br /><br />
+                                    </div>
+                                    <div>
+                                        <h4>Perfil liberação do médico</h4>
+                                        <div class="itens-titulos">
+                                            <input type="text" size="40"
+                                                placeholder="Descrição (1978 - HSL_UTI/UCG_MEDICO)"></br><br />
+                                        </div>
+
+                                        <h4>Perfil liberação enfermagem</h4>
+                                        <div class="itens-titulos">
+                                            <input type="text" size="40"
+                                                placeholder="Descrição (1978 - HSL_UTI/UCG_MEDICO)"></br>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div id="opt_robo_sim">
+                                        <h4>Cópia pelo robô</h4>
+                                        <div class="itens-titulos">
+                                            Horário da cópia <input type="time" name="horario" size="15">
+                                            <br /></br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul id="vazio"></ul>
+                                </div>
+
+                            <div class="divopt">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>Parâmetros</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" name="Estabelecimento">
+                                         Habilitar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="checkbox" name="Estabelecimento"> Desabilitar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" value="1" />
+                                            Medispan</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" value="2" />
+                                            Protocolo TEV</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" value="3" />
+                                            Protocolo MEWS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input  type="checkbox" value="4" /> Visão
+                                            de Setor</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" id="robo_sim"
+                                                value="5" /> Cópia pelo robô</td><br />
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" value="6" />
+                                            Perfil de Acesso Médico </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input  type="checkbox" value="7" />
+                                            Painel Multidisciplinar</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input  type="checkbox" value="8" />
+                                            Prescrição Controlada de Analgesia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input type="checkbox" value="9" />
+                                            Aprazamento, reaprazamento, <br />administração e suspensão de horário </td>
+                                    </tr>
+                                    <tr id="botao">
+                                        <td id="botao"><button type="button">Adicionar</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </article>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="tabs" id="tab2">
+                    <label for="tab2">Configuração Novo Setor</label>
+                    <div class="conteudo">
+                        <article>
+                            <div class="inputs">
+                                <div>
+                                    <h4>Estabelecimento</h4>
+                                    <div class="itens-titulos">
+                                        <input type="checkbox" name="Estabelecimento" value="Bela Vista"> 1 - Bela Vista
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> 321 -
+                                        Brasília &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> Outro <input
+                                            type="text" name="Estabelecimento" size="5">
+                                    </div>
+
+                                    <br /><br />
+
+                                    <h4>Configuração ambiente</h4>
+                                    <div class="itens-titulos">
+                                        <input type="checkbox" name="Estabelecimento" value="Bela Vista"> Homologação
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> Simulação &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="Estabelecimento" value="321 Brasília"> Qualidade
+                                    </div>
+
+
+                                    <br />
+
+
+                                    <h4>Código Setor</h4>
+                                    <div class="itens-titulos">
+                                        <input type="number" size="5" placeholder="Número"> <br /><br />
+                                    </div>
+
+                                    <div>
+                                        <h4>Setor espelho</h4>
+                                        <div class="itens-titulos">
+                                            <input id="setorespelho" type="number" size="25" placeholder="Número"><br /><br />
+                                        </div>
+
+                                        <h4>Perfil liberação do médico</h4>
+                                        <div class="itens-titulos">
+                                            <input type="text" size="40"
+                                                placeholder="Descrição (1978 - HSL_UTI/UCG_MEDICO)"></br><br />
+                                        </div>
+
+                                        <h4>Perfil liberação enfermagem</h4>
+                                        <div class="itens-titulos">
+                                            <input type="text" size="40"
+                                                placeholder="Descrição (1978 - HSL_UTI/UCG_MEDICO)"></br>
+                                        </div>
+                                    </div>
+                                  
+
+                                </div>
+                            </div>
+
+                            <div id="divopt">
+                                <table>
+                                    <tr>
+                                        <h4 id="titulo-centralizado">Parâmetros</h4>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="1"  />Pyxis
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="2" />Medispan
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="3" />Link Palmweb
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="4" />Protocolo TEV
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="5" />Visão de Setor
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="6" />Protocolo MEWS
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="7" />Material Setor
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="8" /> Cópia pelo robô
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="9" />Regras de Cobrança 
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" id="robo_sim" value="10" />Regra Cobrança Gás
+                                        </td><br />
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="11" />Painel Higienização	
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="12" />Cópia dos Intervalos
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="13" />Painel Multidisciplinar
+                                        </td>
+                                        <td class="borda-tabela">
+                                            <input class="param" type="checkbox" value="14" />Perfil de Acesso Médico
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="borda-tabela"><input class="param" type="checkbox"value="15"  />Regra Taxa x Respirador</td>
+                                        <td class="borda-tabela"><input class="param" type="checkbox"
+                                                value="16" />Regra Lançamento Diário</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="17" />Regras de Controle Glicêmico </td>
+                                        <td class="borda-tabela"><input class="param" type="checkbox"
+                                                value="18" />Cópia Intervenções Enfermagem
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="19" />Liberação Setor para Usuários</td>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="20" />Regra Tempo Exibição Processos</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="21" /> Regra Gestão Serviços de Leitos </td>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="22" />Prescrição Controlada de Analgesia
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="23" />Atualização Setor na Estrutura Atendimento
+                                        </td>
+                                        <td class="borda-tabela"><input class="param" type="checkbox" value="24" />Aprazamento, reaprazamento, administração e suspensão de horário </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><button id="botao-largo"value="Uncheck All" type="button">Adicionar</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </article>
+                                             
+                        <div id="selecionados">
+                            <ul>
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </fieldset>
+
+    
+    </main>
+    <footer>
+        <p>©️ 2021 Hospital Sírio Libanês. Todos os direitos reservados</p>
+        <br />
+        <p>Telefone: (11) 3155-0200</p>
+        <br />
+        <p>HSL - Desenvolvimento</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+
+</html>
